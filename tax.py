@@ -1,15 +1,24 @@
-TAX_RATE = 0.20
-STANDARD_DEDUCTION = 10000.0
-DEPENDENT_DEDUCTION = 3000.0
-
-# Request the inputs
-grossIncome = float(input("Enter the gross income: "))
-numDependents = int(input("Enter the number of dependents: "))
-
-# Compute the income tax
-taxableIncome = grossIncome - STANDARD_DEDUCTION - \
-                DEPENDENT_DEDUCTION * numDependents
-incomeTax = taxableIncome * TAX_RATE
-         
-# Display the income tax
-print("The income tax is $" + str(round(incomeTax, 2)))
+def add(a, b):
+  return a + b
+def sub(a, b):
+  return a - b
+def mul(a, b):
+  return a * b
+def div(a, b):
+  return a / b
+def main():
+st.title("Simple Calculator")
+st.write("This is a simple calculator app")
+a = st.number_input("Enter a number")
+b = st.number_input("Enter another number")
+operation = st.selectbox("Select Operation", ["Add", "Subtract", "Multiply", "Divide"])
+if operation == "Add":
+st.write(add(a, b))
+elif operation == "Subtract":
+st.write(sub(a, b))
+elif operation == "Multiply":
+st.write(mul(a, b))
+elif operation == "Divide":
+st.write(div(a, b))
+if __name__ == '__main__':
+main()
