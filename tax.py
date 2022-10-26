@@ -34,10 +34,10 @@ def valid_expression(strex):
 
     
 def main():
-    st.title(' ofir Calculator')
+    st.title(' Tax Calculator')
 
     # The input value from the user will be saved in user_expr.
-    user_expr = st.text_input('Please enter a mathematical expression')
+    user_expr = st.text_input('Please enter your wage')
 
     if not valid_expression(user_expr):
         st.error("Invalid Expression")
@@ -46,7 +46,7 @@ def main():
 
         # Get the value of the expression.
         value = get_value(user_expr)
-        st.write(f'The answer is {value}.')  # ref.: https://docs.python.org/3/tutorial/inputoutput.html
+        st.write(f'The tax is {value}.')  # ref.: https://docs.python.org/3/tutorial/inputoutput.html
 
 
 # Entry point
