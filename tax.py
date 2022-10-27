@@ -37,7 +37,7 @@ def main():
     st.title(' Tax Calculator')
 
     # The input value from the user will be saved in user_expr.
-    user_expr = st.text_input('Please enter your wage')
+    user_expr = st.text_input('Please enter your wage minus 10,000 and 3,00 for any dependent and times by 0.2')
 
     if not valid_expression(user_expr):
         st.error("Invalid Expression")
